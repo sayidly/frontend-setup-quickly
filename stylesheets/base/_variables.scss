@@ -1,0 +1,82 @@
+/* 定义需要用到的一些变量 */
+
+// Color
+
+$main-color:            #114d97;
+$secondly-color:        #00a8e1;
+
+$bg-color:              #fff;
+
+$text-color:            #1a1a1a;
+$link-color:            #00a8e1;
+$border-color:          #aaa;
+$smoke-color:           #f3f3f3;
+
+$notice-color:          #cd0505;
+
+// Typography
+
+$font-family:       "Helvetica Neue", -apple-system, "Hiragino Sans GB" , "PingFang SC", "Microsoft YaHei", "Heiti SC", sans-serif;
+$font-size-xl:      1.6em;
+$font-size-l:       1.2em; // font-size on desktop type screens
+$font-size-n:       1em;
+$font-size-m:       $font-size-n * 0.9; // font-size under 942px wide screens
+$font-size-s:       $font-size-n * 0.85; // font-size under 642px wide screens
+
+
+// Spacings
+
+$spacing-xs:        .5em;
+$spacing-s:         $spacing-xs * 2;  // 1em
+$spacing-sm:        $spacing-s + $spacing-xs; // 1.5em
+$spacing-m:         $spacing-sm + $spacing-xs;  // 2em
+$spacing-ml:        $spacing-m + $spacing-s; // 3em
+$spacing-l:         $spacing-ml + $spacing-s; // 4em
+$spacing-xl:        $spacing-l + $spacing-s;  // 5em
+
+
+// Media Queries
+@mixin bp($point) {
+  @if $point == se {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+  @if $point == mobile {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @else if $point == btmobile {
+    @media only screen and (min-width: 481px) {
+      @content;
+    }
+  }
+  @else if $point == ipad {
+    @media only screen and (min-width: 481px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @else if $point == desktop {
+    @media only screen and (min-width: 1025px) {
+      @content;
+    }
+  }
+  @else if $point == largescreen {
+    @media only screen and (min-width: 1921px) {
+      @content;
+    }
+  }
+}
+
+@mixin object-fit($fit: fill, $position: null) {
+  object-fit: $fit;
+  -o-object-fit: $fit;
+  @if $position {
+    object-position: $position;
+    -o-object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}

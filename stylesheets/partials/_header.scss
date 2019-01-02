@@ -1,0 +1,129 @@
+header {
+  @extend %padding-large;
+  padding-top: $spacing-m;
+  width: 100%;
+  background: white;
+
+  @include bp(ipad) {
+    padding-left: $spacing-xl;
+    padding-right: $spacing-xl;
+  }
+
+  @include bp(desktop) {
+    padding-left: $spacing-xl;
+    padding-right: $spacing-xl;
+  }
+}
+
+// .image-header {
+//   height: 440px;
+
+// }
+
+.light-header {
+  background-color: $smoke-color;
+  padding-bottom: $spacing-m;
+  height: 120px;
+
+}
+
+.center-logo {
+  .container {
+    position: relative;
+    text-align: center;
+
+    @include bp(desktop) {
+      text-align: left;
+    }
+  }
+
+  .logo {
+    margin: 0px;
+    display: inline-block;
+
+    a {
+      display: block;
+    }
+  }
+
+}
+
+.login-success {
+  padding: 0px;
+  position: relative;
+
+  .bg {
+    img {
+      width: 100%;
+
+      @include bp(ipad) {
+        &.desktoponly {
+          display: block;
+        }
+
+        &.mobileonly {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include bp(ipad) {
+    height: 240px;
+
+    .bg {
+      position: absolute;
+      height: 100%;
+      transform: translateX(-50%);
+      left: 50%;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  div.page-title {
+    text-align: center;
+    max-width: 600px;
+    min-width: 300px;
+
+    img {
+      width: 100%;
+
+
+    }
+  }
+
+  .container {
+    padding: $spacing-m $spacing-l;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+    height: 100%;
+    left: 50%;
+    z-index: 1;
+
+    @include bp(btmobile) {
+      padding: $spacing-m $spacing-ml;
+      text-align: left;
+
+      div.page-title {
+        width: 50vw;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+    }
+
+    @include bp(ipad) {
+
+      div.page-title {
+        width: 50vw;
+        margin-top: 20px;
+      }
+    }
+  }
+}

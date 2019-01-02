@@ -1,0 +1,190 @@
+.form-container {
+  padding: $spacing-m $spacing-m;
+
+  h2.form-title {
+    margin-bottom: $spacing-sm;
+    font-size: 140%;
+    text-align: center;
+  }
+
+  .content-container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .form-notice {
+      margin-top: 0;
+    }
+  }
+
+  .account-info {
+    label {
+      color: $text-color;
+      cursor: pointer;
+    }
+
+    .input-item {
+      margin-bottom: $spacing-m;
+    }
+
+    input {
+      color: $text-color;
+      display: block;
+      margin: 8px 0;
+      padding: $spacing-s $spacing-s;
+      background-color: $smoke-color;
+      width: 100%;
+      outline: none;
+      border: 1px solid transparent;
+
+      &:focus {
+        outline: none;
+        background-color: #f1f1f1;
+      }
+    }
+
+    .error {
+      input {
+        border: 1px solid $notice-color;
+      }
+
+      p {
+        margin: 0px 0 $spacing-s 0;
+        font-size: $font-size-m;
+      }
+    }
+
+    .buttonInside {
+      position: relative;
+
+      button {
+        display: inline-block;
+        position: absolute;
+        font-size: $font-size-m;
+        right: $spacing-s;
+        top: 50%;
+        transform: translate(0, -50%);
+        border: 0;
+        background: none;
+        color: lighten($text-color, 40%);
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .tips {
+    margin: 0;
+  }
+
+  .account-action {
+    position: relative;
+    padding: $spacing-l;
+    text-align: center;
+
+    // a,
+    // input {
+    //    position: absolute; 
+    //    left: 50%;
+    //    transform: translateX(-50%);
+    // }
+
+    // a { top: 80px; }
+  }
+
+  .account-addon {
+    display: block;
+
+    div {
+      padding-left: $spacing-m;
+    }
+
+    div:first-of-type {
+      margin-bottom: $spacing-s;
+    }
+  }
+
+  /*Checkboxes styles*/
+  .styled-checkbox {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    &+label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    // Box.
+    &+label:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -26px;
+      vertical-align: text-top;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border: 1px solid $main-color;
+      top: 0px;
+    }
+
+    // Box hover
+    &:hover+label:before {
+      background: $smoke-color;
+    }
+
+    // Box checked
+    &:checked+label:before {
+      background: $main-color;
+    }
+
+    // Disabled state label.
+    &:disabled+label {
+      color: $main-color;
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled+label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked+label:after {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 7px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.form-container {
+  #accountNumber {
+    font-weight: bold;
+  }
+
+  section {
+    margin-top: 0;
+  }
+
+  section+section {
+    margin-top: $spacing-l;
+  }
+}
+
+#accountNumber {
+  font-weight: bold;
+}

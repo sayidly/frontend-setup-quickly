@@ -1,0 +1,272 @@
+/* This file using for the framework of the pages */
+
+body {
+	font-size: 14px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+}
+
+p {
+	margin-bottom: $spacing-s;
+}
+
+.container {
+	padding: $spacing-l $spacing-m;
+	padding-bottom: $spacing-m;
+
+	@include bp(desktop) {
+		padding: $spacing-l $spacing-m;
+	}
+}
+
+.container .form-title {
+	font-size: 150%;
+	color: $main-color;	
+	text-align: center;
+	margin-bottom: $spacing-s;
+}
+
+.form-container { 
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: $spacing-ml;
+}
+
+.primary-header {
+	background-color: $smoke-color;
+}
+
+h1.logo {
+	padding: $spacing-xs $spacing-l;
+	text-align: center;
+
+	@include bp(desktop) {
+		text-align: left;
+	}
+}
+
+
+/* form styling */
+
+.account-info label {
+	color: $text-color;	
+	cursor: pointer;
+}
+
+.account-info input {
+	border: none;
+	color: $text-color;
+	display: block;
+	margin: 5px 0 27px 0;
+	padding: $spacing-s $spacing-s;
+	background-color: $smoke-color;
+	width: 100%;
+}
+
+.buttonInside {
+	position: relative;	
+}
+
+.account-info button{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0, -50%); 
+	margin-right: 10px;
+	border: 0;
+	background: none;
+}
+
+.light-link {
+	color: lighten($text-color, 40%);
+}
+
+button:hover {
+  cursor:pointer;
+} 
+
+.notice {
+	font-size: $font-size-m;
+}
+
+.account-action {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.btn-default {
+	font-size: $font-size-s;
+	background: $main-color;
+	padding: $spacing-xs $spacing-m;
+	border: 0;
+	margin: 0 auto;
+
+	@include bp(desktop) {
+		font-size: $font-size-l;
+	}
+}
+
+.btn {
+	color: white;
+	font-weight: 700;
+	cursor: pointer;
+	display: inline-block;
+	margin-bottom: $spacing-s;
+}
+
+/* Styling form group */
+
+.account-addon {
+	display: block;
+
+	div {
+		padding-left: $spacing-m;
+	}
+	div:first-of-type {
+		margin-bottom: $spacing-s;
+	}
+}
+
+/*Checkboxes styles*/
+.styled-checkbox {
+	position: absolute; // take it out of document flow
+	opacity: 0; // hide it
+
+	& + label {
+		position: relative;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	// Box.
+	& + label:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: -26px;
+		vertical-align: text-top;
+		width: 20px;
+		height: 20px;
+		background: white;
+		border: 1px solid $main-color;
+	}
+
+	// Box hover
+	&:hover + label:before {
+		background: $smoke-color;
+	}
+
+	// Box checked
+	&:checked + label:before {
+		background: $main-color;
+	}
+
+	// Disabled state label.
+	&:disabled + label {
+		color: $main-color;
+		cursor: auto;
+	}
+
+	// Disabled box.
+	&:disabled + label:before {
+		box-shadow: none;
+		background: #ddd;
+	}
+
+	// Checkmark. Could be replaced with an image
+	&:checked + label:after {
+		content: '';
+		position: absolute;
+		left: -21px;
+		top: 6px;
+		background: white;
+		width: 2px;
+		height: 2px;
+		box-shadow:
+		2px 0 0 white,
+		4px 0 0 white,
+		4px -2px 0 white,
+		4px -4px 0 white,
+		4px -6px 0 white,
+		4px -8px 0 white;
+		transform: rotate(45deg);
+	}
+}
+
+.image-header {
+	background-image:url("../../../images/login-success-banner.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 300px;
+
+	h1.page-title {
+		font-size: 200%;
+		color: white;
+		font-weight: 700;
+		text-align: center;
+		line-height: 1.2;
+
+		@include bp(desktop) {
+			font-size: 250%;
+		}
+	}
+}
+
+#accountNumber {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.form-container {
+
+	h2.section-title {
+		font-size: 150%;
+		margin-bottom: $spacing-xs;
+		color: $main-color;
+	}
+
+	#accountNumber {
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	h3 {
+		font-size: $font-size-m;
+		color: $link-color;
+		font-weight: 700;
+		letter-spacing: 1px;
+		margin-bottom: $spacing-xs;
+	}
+
+	ul {
+		padding-left: $spacing-s;
+		margin-bottom: $spacing-m;
+	}
+
+	li {
+		margin-bottom: $spacing-s;
+	}
+}
+
+
+.btn-link {
+	color: white;
+	font-size: $font-size-s;
+	background: $link-color;
+	padding: $spacing-xs $spacing-m;
+	border: 0;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	a { color: white; }
+}
+
