@@ -30,12 +30,12 @@ Google Fonts
 └── yarn.lock
 ```
 
-`.gitignore` 文件中放置需要忽略的目录或文件
-`assets` 中是资料目录可以放置 `fonts` `images` 等
+`.gitignore` 文件中放置需要忽略的目录或文件  
+`assets` 中是资料目录可以放置 `fonts` `images` 等  
 `dists` 中是 gulp 生成的目标目录  
-`gulpfile.js` 是 gulp 的代码，可进行编辑定制 gulp 的自动化流程
-`package.json` 里是 gulpfile.js 中用到的 package
-`scripts` 中放置 js 代码
+`gulpfile.js` 是 gulp 的代码，可进行编辑定制 gulp 的自动化流程  
+`package.json` 里是 gulpfile.js 中用到的 package  
+`scripts` 中放置 js 代码  
 `stylesheets` 中放置 SCSS 代码
 
 ## 3. Set up environment
