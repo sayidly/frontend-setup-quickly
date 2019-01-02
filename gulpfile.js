@@ -35,7 +35,7 @@ const paths = {
         dest: "dist/stylesheets"
     },
     scripts: {
-        src: "scripts/**/*.js",
+        src: "scripts/*.ts",
         dest: "dist/scripts"
     },
     images: {
