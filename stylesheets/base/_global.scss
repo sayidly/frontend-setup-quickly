@@ -362,8 +362,13 @@ fieldset {
 /* special state */
 
 .error,
-.notice, .error-msg {
+.error-msg {
   color: $error-color;
+}
+
+.warning,
+.notice {
+  color: $warning-color;
 }
 
 /* mobile/desktop only */
