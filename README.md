@@ -59,6 +59,11 @@ yarn add packagename
 
 ### 4. Run the project
 
+Run the gulp for build
+```
+gulp
+```
+
 Run the gulp for development
 ```
 gulp serve
