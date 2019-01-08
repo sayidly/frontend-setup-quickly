@@ -3376,7 +3376,7 @@ jasmine-core@~2.4.0:
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.4.1.tgz#6f83ab3a0f16951722ce07d206c773d57cc838be"
   integrity sha1-b4OrOg8WlRcizgfSBsdz1XzIOL4=
 
-"jasmine@github:dflynn15/jasmine-npm":
+jasmine@dflynn15/jasmine-npm:
   version "2.4.1"
   resolved "https://codeload.github.com/dflynn15/jasmine-npm/tar.gz/5f74e4336b247e67bbc509a8f82f3c4fa6b52964"
   dependencies:

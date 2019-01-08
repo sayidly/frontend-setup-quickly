@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font: 14px/1.6 $font-family;
+  font: 16px/1.6 $font-family;
   color: $text-color;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: auto;
@@ -363,7 +363,7 @@ fieldset {
 
 .error,
 .notice, .error-msg {
-  color: $notice-color;
+  color: $error-color;
 }
 
 /* mobile/desktop only */
