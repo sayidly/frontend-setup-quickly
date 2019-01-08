@@ -2,12 +2,39 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Template</title>
+    <meta name="author" content="sayid he">
+    <meta name="copyright" content="sayidhe.com">
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {families: ['Nunito+Sans:400,400i|Spectral:400,700']}
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <style>
+        .wf-loading {  /* styles for fallback fonts */
+            font-family: 'Helvetica Neue', Helvetica , Arial, sans-serif;
+	 	 }
+        .wf-active {  /* styles for custom fonts */
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica , Arial, sans-serif;
+        }
+        .wf-inactive { /* use fallback fonts */
+            font-family: 'Helvetica Neue', Helvetica , Arial, sans-serif;
+        }
+    </style>
+
     <link rel="stylesheet" href="/stylesheets/main.css" type="text/css">
     <script src="/scripts/output.js"></script>
 </head>
 <body>
-   <h1>html Template</h1>
+   <h1>HTML Template</h1>
 </body>
 </html>
