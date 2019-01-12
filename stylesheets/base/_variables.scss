@@ -40,46 +40,46 @@ $spacing-xl:        $spacing-l + $spacing-s;  // 5em
 
 // Media Queries
 @mixin bp($point) {
-  @if $point == se {
-    @media only screen and (max-width: 320px) {
-      @content;
+    @if $point == se {
+        @media only screen and (max-width: 320px) {
+            @content;
+        }
     }
-  }
-  @if $point == mobile {
-    @media only screen and (max-width: 480px) {
-      @content;
+    @if $point == mobile {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
     }
-  }
-  @else if $point == btmobile {
-    @media only screen and (min-width: 481px) {
-      @content;
+    @else if $point == btmobile {
+        @media only screen and (min-width: 481px) {
+            @content;
+        }
     }
-  }
-  @else if $point == ipad {
-    @media only screen and (min-width: 481px) and (max-width: 1024px) {
-      @content;
+    @else if $point == ipad {
+        @media only screen and (min-width: 481px) and (max-width: 1024px) {
+            @content;
+        }
     }
-  }
-  @else if $point == desktop {
-    @media only screen and (min-width: 1025px) {
-      @content;
+    @else if $point == desktop {
+        @media only screen and (min-width: 1025px) {
+            @content;
+        }
     }
-  }
-  @else if $point == largescreen {
-    @media only screen and (min-width: 1921px) {
-      @content;
+    @else if $point == largescreen {
+        @media only screen and (min-width: 1921px) {
+            @content;
+        }
     }
-  }
 }
 
 @mixin object-fit($fit: fill, $position: null) {
-  object-fit: $fit;
-  -o-object-fit: $fit;
-  @if $position {
-    object-position: $position;
-    -o-object-position: $position;
-    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
-  } @else {
-    font-family: 'object-fit: #{$fit}';
-  }
+    object-fit: $fit;
+    -o-object-fit: $fit;
+    @if $position {
+        object-position: $position;
+        -o-object-position: $position;
+        font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+    } @else {
+        font-family: 'object-fit: #{$fit}';
+    }
 }
