@@ -37,24 +37,24 @@ h1 {
 }
 
 h2 {
+  color: $main-color;
   font-size: 120%;
   margin: $spacing-s 0 $spacing-xs;
-  color: $main-color;
 }
 
 h3 {
+  color: $secondly-color;
   font-size: 100%;
   margin: $spacing-sm 0 $spacing-xs;
-  color: $secondly-color;
 }
 
 h4 {
+  color: lighten($text-color, 40%);
   font-size: 80%;
   font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 3px;
   margin: $spacing-l 0 $spacing-xs;
-  color: lighten($text-color, 40%);
+  text-transform: uppercase;
 }
 
 h5 {
@@ -85,8 +85,8 @@ ol li {
 }
 
 ul {
-  padding-left: $spacing-s;
   margin-bottom: $spacing-m;
+  padding-left: $spacing-s;
 }
 
 li {
@@ -99,9 +99,9 @@ button {
 
 a {
   color: $link-color;
+  display: initial;
   text-decoration: none;
   outline: none;
-  display: initial;
 
   &:hover {
     opacity: 0.9;
@@ -110,9 +110,9 @@ a {
 
 hr {
   display: block;
-  height: 1px;
   border: 0;
   border-top: 1px solid $border-color;
+  height: 1px;
   margin: 1em 0;
   padding: 0;
 }
@@ -120,288 +120,12 @@ hr {
 /* Making images resonsive */
 
 img {
-  border: 1px solid #f1f1f1;
   height: auto;
-  margin-top: 1em;
   width: 100%;
 }
 
 fieldset {
   border: 0;
-  padding: 0;
   margin: 0;
-}
-
-
-// Shared layouts
-
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-
-  .content-container {
-    width: 90%;
-    max-width: 460px;
-    margin: 0 auto;
-  }
-}
-
-.wrapper {
-  @extend %padding-regular;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.item {
-  @extend %transition;
-  padding: $spacing-s 0;
-  width: 100%;
-}
-
-/* column-3 */
-
-.column-3 {
-  @include bp(btmobile) {
-    .item {
-      float: left;
-      width: 33.33%;
-    }
-  }
-}
-
-.column-3:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.tips {
-  font-size: $font-size-m;
-
-  p {
-    line-height: 1.4;
-  }
-}
-
-.white {
-  color: white;
-}
-
-.btn {
-  color: white;
-  font-weight: 900;
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: $spacing-s;
-  text-align: center;
-
-  a {
-    color: white;
-  }
-}
-
-.btn-default,
-.btn-link {
-  font-size: 1.1em;
-  background: $main-color;
-  padding: $spacing-xs $spacing-sm;
-  border: 0;
-  min-width: 140px;
-  @extend %transition;
-
-  &:hover {
-    opacity: 0.9
-  }
-
-  @include bp(btmobile) {
-    font-size: 140%;
-  }
-
-  &.btn-next {
-    position: relative;
-    padding-right: $spacing-m;
-
-    &:after {
-      content: "";
-      width: 22px;
-      height: 22px;
-      background: url("../../../images/next-white.svg") no-repeat 0 0;
-      position: absolute;
-      background-size: cover;
-      top: 50%;
-      margin-top: -11px;
-      right: 0.8em;
-    }
-  }
-}
-
-.btn-default {
-  background: $main-color;
-}
-
-.btn-link {
-  background: $secondly-color;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.center-cropped {
-  height: 400px;
-  width: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-
-  @include bp(desktop) {
-    height: 100%;
-    background-position: left top;
-  }
-}
-
-/* Set the image to fill its parent and make transparent */
-.center-cropped img {
-  min-height: 100%;
-  //min-width: 100%;
-  /* IE 8 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  /* IE 5-7 */
-  filter: alpha(opacity=0);
-  /* modern browsers */
-  opacity: 0;
-}
-
-
-/* Slide */
-/* Hide the images by default */
-.myslides-content {
-  display: none;
-}
-
-.carousel-indicator {
-  position: absolute;
-  bottom: $spacing-m;
-  left: 0px;
-  width: 100%;
-  user-drag: none;
-  user-select: none;
-
-  .prev,
-  .next,
-  .dot {
-    cursor: pointer;
-  }
-
-  .prev,
-  .next {
-    opacity: 0.6;
-    transition: 0.2s ease;
-    width: 24px;
-    height: 24px;
-    position: relative;
-    display: inline-block;
-    padding: 0 10px;
-
-    img {
-      width: 20px;
-      position: absolute;
-      left: 2px;
-      top: 2px;
-    }
-  }
-
-  .prev img {
-    transform: rotate(180deg);
-  }
-
-  .prev:hover,
-  .next:hover {
-    opacity: 1;
-  }
-
-  .dot {
-    height: 7px;
-    width: 7px;
-    margin: 8px 10px;
-    background-color: rgba(255, 255, 255, .6);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active,
-  .dot:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-timing-function: ease;
-  animation-name: fade;
-  animation-timing-function: ease;
-  animation-duration: 2s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-
-/* special state */
-
-.error,
-.error-msg {
-  color: $error-color;
-}
-
-.warning,
-.notice {
-  color: $warning-color;
-}
-
-/* mobile/desktop only */
-
-.mobileonly {
-  display: block;
-}
-
-.actions .mobileonly {
-  display: inline-block;
-}
-
-@include bp(desktop) {
-  .desktoponly {
-    display: block;
-  }
-
-  .mobileonly,
-  .actions .mobileonly {
-    display: none;
-  }
-
-  .actions .desktoponly {
-    display: inline-block;
-  }
+  padding: 0;
 }
