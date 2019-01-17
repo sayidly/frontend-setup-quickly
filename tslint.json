@@ -1,12 +1,14 @@
 {
-    "files": [
-        "scripts/main.ts"
-    ],
-    "compilerOptions": {
-        "noImplicitAny": true,
-        "target": "es5"
-    },
-    "jsRules": {
-      "no-empty": true
-    }
+  "files": [
+    "scripts/main.ts"
+  ],
+  "compilerOptions":
+  {
+    "noImplicitAny": true,
+    "target": "es5"
+  },
+  "jsRules":
+  {
+    "no-empty": true
+  }
 }
