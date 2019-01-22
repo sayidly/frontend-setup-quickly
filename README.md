@@ -61,15 +61,15 @@ yarn add packagename
 
 Run the gulp for build
 ```
-gulp
+yarn gulp
 ```
 
 Run the gulp for development
 ```
-gulp serve
+yarn gulp serve
 ```
 
 Run the gulp for production, will compress the css file
 ```
-gulp production
+yarn gulp production
 ```
