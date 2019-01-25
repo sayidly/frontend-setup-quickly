@@ -25,5 +25,10 @@
     "gulp-uglify": "^3.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "gulp": "yarn gulp",
+    "gulp serve": "yarn gulp serve",
+    "gulp production": "yarn gulp production"
   }
 }
