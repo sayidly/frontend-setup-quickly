@@ -1,4 +1,1 @@
-function hello(compiler) {
-    console.log("Hello from " + compiler);
-}
-hello("TypeScript");
+function hello(l){console.log("Hello from "+l)}hello("TypeScript");
