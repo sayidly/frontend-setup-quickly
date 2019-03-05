@@ -90,7 +90,14 @@ function styles() {
 function images() {
   return gulp.src(paths.images.src)
     .pipe(gulpIf(production, imagemin()))
-    .pipe(gulp.dest(paths.images.dest));
+    .pipe(gulp.dest(paths.images.dest))
+}
+
+function copyFiles() {
+  gulp.src(['favicon.png', 'CNAME'])
+    .pipe(gulp.dest('dist'))
+  gulp.src(['README.md'])
+    .pipe(gulp.dest('dist'))
 }
 
 //External Tasks
@@ -114,6 +121,7 @@ gulp.task("serve", gulp.series('default', () => {
   browserSync.init({
     server: "./dist"
   });
+  copyFiles();
   gulp.watch(paths.styles.src, gulp.series(styles));
   gulp.watch(paths.scripts.src, gulp.series(scripts));
   gulp.watch(paths.images.src, gulp.series(images));
