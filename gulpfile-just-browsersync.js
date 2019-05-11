@@ -6,6 +6,6 @@ gulp.task("serve", gulp.series(() => {
       server: "./"
     });
     gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch("*.css").on('change', browserSync.reload);
-    gulp.watch("*.js").on('change', browserSync.reload);
+    gulp.watch("**/*.css").on('change', browserSync.reload);
+    gulp.watch("**/*.js").on('change', browserSync.reload);
   }));
