@@ -7,7 +7,7 @@
     "url": "https://github.com/",
     "type": "git"
   },
-  "author": "Wiredcraft",
+  "author": "Sayid",
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.26.3",
