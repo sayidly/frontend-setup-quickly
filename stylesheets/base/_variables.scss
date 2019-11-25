@@ -51,40 +51,39 @@ $screen-xl-min: 1200px;
 
 @mixin bp($breakpoint) {
   // Small devices
-  @if $point==sm {
+  @if $breakpoint==sm {
     @media (min-width: #{$screen-sm-min}) {
       @content;
     }
   }
 
   // Medium devices
-  @if $point==md {
+  @if $breakpoint==md {
     @media (min-width: #{$screen-md-min}) {
       @content;
     }
   }
 
   // Large devices
-  @else if $point==lg {
+  @else if $breakpoint==lg {
     @media (min-width: #{$screen-lg-min}) {
       @content;
     }
   }
 
   // Extra large devices
-  @else if $point==xl {
+  @else if $breakpoint==xl {
     @media (min-width: #{$screen-xl-min}) {
       @content;
     }
   }
 
   // Custom devices
-  @else if $point==rwd($screen) {
+  @else if $breakpoint==rwd {
     @media (min-width: $screen+'px') {
       @content;
     }
   }
-  
 }
 
 @mixin object-fit($fit: fill, $position: null) {

@@ -1,0 +1,23 @@
+.container {
+
+    // extend padding
+    @extend %padding-regular;
+
+    // 576px window width and more
+    @include bp(sm) {
+        padding: 0 20px;
+    }
+
+    // 992px window width and more
+    @include bp(lg) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1100px;
+    }
+
+    // 1400px window width and more
+    @include bp(rwd(1400)) {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
