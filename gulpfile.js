@@ -93,8 +93,6 @@ function images() {
 function copyFiles() {
   gulp.src(['favicon.png', 'CNAME'], { allowEmpty: true })
     .pipe(gulp.dest('dist'))
-  gulp.src(['README.md'])
-    .pipe(gulp.dest('dist'))
 }
 
 //External Tasks
