@@ -4,11 +4,12 @@
   "description": "Using yarn",
   "main": "index.js",
   "repository": {
-    "url": "https://github.com/",
+    "url": "https://github.com/sayidly/frontend-setup-quickly.git",
     "type": "git"
   },
   "author": "Sayid",
   "license": "MIT",
+  "private": true,
   "dependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
@@ -25,5 +26,10 @@
     "gulp-uglify": "^3.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }
