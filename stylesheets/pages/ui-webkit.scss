@@ -16,7 +16,7 @@
     }
 
     // 1400px window width and more
-    @include bp(rwd(1400)) {
+    @include rwd(1400) {
         margin-bottom: 20px;
         margin-top: 20px;
     }

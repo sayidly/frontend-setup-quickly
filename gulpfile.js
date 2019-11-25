@@ -80,8 +80,8 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(postcss([ autoprefixer() ]))
-    .pipe(sourcemaps.write('.'))
     .pipe(rename('main.css'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream())
 }
