@@ -9,14 +9,13 @@ const clean = require('gulp-clean');
 const imagemin = require('gulp-imagemin');
 
 const sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
+const autoprefixer = require('autoprefixer')
 const sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss')
 
 const ts = require("gulp-typescript");
 const tslint = require("gulp-tslint");
 const uglify = require('gulp-uglify');
-
-const jasmine = require("gulp-jasmine-phantom");
 
 const notify = require('gulp-notify');
 
@@ -46,7 +45,7 @@ const paths = {
 
 //Internal Tasks
 function cleanDist() {
-  return gulp.src('dist/')
+  return gulp.src('dist/', { allowEmpty: true })
     .pipe(clean())
 }
 
@@ -79,7 +78,8 @@ function styles() {
   return gulp.src(paths.styles.main_scss_src)
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(sourcemaps.write())
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(browserSync.stream())
 }
@@ -98,14 +98,6 @@ function copyFiles() {
 }
 
 //External Tasks
-
-gulp.task("tests", () => {
-  return gulp.src("./tests/test.js")
-    .pipe(jasmine({
-      integration: true,
-      vendor: '_build/**/*.js'
-    }));
-})
 
 gulp.task("default",
   gulp.series(cleanDist, gulp.parallel(html, scripts, styles, images))
