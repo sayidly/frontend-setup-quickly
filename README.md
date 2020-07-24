@@ -86,3 +86,24 @@ Run the gulp for production, will compress the css file
 (yarn/npm) gulp production
 ```
 
+## Error
+
+```
+gyp: No Xcode or CLT version detected!
+gyp ERR! configure error
+```
+
+Solution
+
+1. First, get the location of the installed command-line tools by running the command below:
+```bash
+xcode-select --print-path
+```
+2. Remove the old command-line tools.
+```bash
+sudo rm -r -f /Library/Developer/CommandLineTools
+```
+3. Install the latest command-line tools
+```bash
+xcode-select --install
+```
